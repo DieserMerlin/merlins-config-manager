@@ -64,6 +64,9 @@ The path "DATABASE.SCHEMAS" will result in this json structure:
 The default "DATABASE"-section will still work but keep in mind that adding a section with a path like "DATABASE.host" would overwrite the "host" field of the database config.
 This is why you should define section paths in uppercase and section values in camel-case (thisIsCamelCase).
 
+Paths can make use of alphanumeric chars, dashes and underscores. Sections are separated by dots.
+Dots cannot be followed by another dot or placed at the start or end of the path.
+
 ### Profiles
 Having different configuration profiles can be achieved by passing a string to the ConfigurationManager's constructor:
 
