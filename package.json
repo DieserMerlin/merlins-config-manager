@@ -1,6 +1,6 @@
 {
   "name": "merlins-config-manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple configuration manager that uses the advantages of typescript to easily create templated config sections.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,8 +10,7 @@
   },
   "scripts": {
     "prepublish": "npm build",
-    "build": "tsc && typedoc --out docs src",
-    "test": "ts-node test\\ConfigFactoryTest.ts"
+    "build": "tsc && typedoc --out docs src"
   },
   "keywords": [],
   "author": "Merlin Westphal",
