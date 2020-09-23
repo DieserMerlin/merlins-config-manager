@@ -35,7 +35,7 @@ const databaseConfig = cm.configSection('DATABASE', DefaultDatabaseConfig);
 ```
 
 "databaseConfig" automatically has the same type as "DefaultDatabaseConfig" and can be used as production configuration.
-When the code is executed the first time, the ConfigurationManager created the config.json file and adds a "DATABASE" section to it containing the default database config.
+When the code is executed the first time, the ConfigurationManager creates the config.json file and adds a "DATABASE" section to it containing the default database config.
 Now you can change your config.json and it will automatically load the changed values.
 
 If you delete a value from the config.json file, the ConfigurationManager will recreate it based on the default values at the next start or configuration update at runtime.
@@ -103,3 +103,12 @@ console.log(factory.config.database.host);
 // "localhost"
 ```
 
+This will create the folder you specify as second parameter of the ConfigFactory-constructor (defaults to 'conf') and all config sections as
+.json-files in it. In the example above, the following file-structure would be created:
+
+```
+Project root
+|- conf
+  |- database.json
+  |- webserver.json
+```
