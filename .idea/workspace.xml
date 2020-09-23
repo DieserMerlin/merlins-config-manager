@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="602b1cc9-9a28-44ab-8d8d-c50e02b68b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ConfigFactory.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ConfigFactoryTest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ConfigManagerTest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConfigManager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigManager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +66,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600844806685</updated>
-      <workItem from="1600844807766" duration="8052000" />
+      <workItem from="1600844807766" duration="8615000" />
     </task>
+    <task id="LOCAL-00001" summary="+ Version increment">
+      <created>1600863182934</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600863182934</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+ Version increment" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Version increment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="210" width="1092" height="786" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600861192387">
@@ -91,6 +98,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="302" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.-240.1050.1650/0.30.1920.1050@0.30.1920.1050" timestamp="1600855806543" />
+    <state x="566" y="123" key="CommitChangelistDialog2" timestamp="1600863182447">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="566" y="123" key="CommitChangelistDialog2/1920.-240.1050.1650/0.30.1920.1050@0.30.1920.1050" timestamp="1600863182447" />
     <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1600861106539">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -163,6 +174,14 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="461" y="200" key="SettingsEditor/1920.-240.1050.1650/0.30.1920.1050@0.30.1920.1050" timestamp="1600860976196" />
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2" timestamp="1600863183961">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="552" y="288" key="Vcs.Push.Dialog.v2/1920.-240.1050.1650/0.30.1920.1050@0.30.1920.1050" timestamp="1600863183961" />
+    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600863041146">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="777" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.-240.1050.1650/0.30.1920.1050@0.30.1920.1050" timestamp="1600863041146" />
     <state x="512" y="284" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600861818194">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

@@ -1,6 +1,6 @@
 {
   "name": "merlins-config-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple configuration manager that uses the advantages of typescript to easily create templated config sections.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
