@@ -3,9 +3,9 @@ A simple configuration manager that uses the advantages of typescript to easily 
 
 ## Installation
 
-```console
+`
 $ npm i merlins-config-manager
-```
+`
 
 ## Usage
 
@@ -72,5 +72,34 @@ Having different configuration profiles can be achieved by passing a string to t
 
 ```typescript
 const cm1 = new ConfigurationManager(); // -> config.json
-const cm2 = new ConfigurationManager('test'); // -> test.config.json
+const cm2 = new ConfigurationManager('test.json'); // -> test.json
 ```
+
+### ConfigFactory
+If you want to split your configs into files instead of sections, you can make use of the ConfigFactory:
+
+```typescript
+import {ConfigFactory} from "merlins-config-manager";
+
+const defaultConfig = {
+    database: {
+        host: "localhost",
+        dbName: "my-cool-database",
+        authentication: {
+            username: "admin",
+            password: "s3cur3"
+        }
+    },
+    webserver: {
+        enabled: true,
+        host: "0.0.0.0",
+        port: 1337
+    }
+};
+
+const factory = new ConfigFactory(defaultConfig);
+
+console.log(factory.config.database.host);
+// "localhost"
+```
+

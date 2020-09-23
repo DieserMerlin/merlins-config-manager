@@ -1,4 +1,5 @@
-import {existsSync, readFileSync, writeFileSync} from 'fs';
+import {existsSync, readFileSync, writeFileSync, mkdirSync} from 'fs';
+import {dirname} from 'path';
 import {mergeConfigs} from './ConfigMerger';
 
 export type ConfigValidation = {
@@ -69,6 +70,7 @@ export class ConfigManager {
      * @param path The path that should be get and (if necessary) created.
      */
     public getOrCreateConfigPath(path: string): any {
+        if (path === '') return this.config;
         ConfigManager.validatePath(path);
         const paths = path.split('.');
         let root = this.config;
@@ -93,14 +95,16 @@ export class ConfigManager {
      */
     public updateConfigPath(path: string, values: any): any {
         this.getOrCreateConfigPath(path); // Ensure path is created
-        const paths = path.split('.').reverse(); // Follow the path reversed (last object first)
-        paths.forEach((p, i) => {
-            if (i + 1 !== paths.length) {
-                values = {[p]: values}; // Now create nested objects from inside to outside ({x} -> {y: {x}} -> ...).
-            } else {
-                this.config[p] = values; // If last path element save that generated path to the real config.
-            }
-        });
+        if (path !== '') {
+            const paths = path.split('.').reverse(); // Follow the path reversed (last object first)
+            paths.forEach((p, i) => {
+                if (i + 1 !== paths.length) {
+                    values = {[p]: values}; // Now create nested objects from inside to outside ({x} -> {y: {x}} -> ...).
+                } else {
+                    this.config[p] = values; // If last path element save that generated path to the real config.
+                }
+            });
+        } else Object.assign(this.config, values);
         this.saveConfig();
         return this.getOrCreateConfigPath(path);
     }
@@ -110,7 +114,8 @@ export class ConfigManager {
      * File format is json formatted with two spaces.
      */
     public saveConfig() {
-        writeFileSync(this.configFileName, JSON.stringify(this.config, null, 2))
+        mkdirSync(dirname(this.configFileName), {recursive: true});
+        writeFileSync(this.configFileName, JSON.stringify(this.config, null, 2));
     }
 
     /**
@@ -182,6 +187,7 @@ export class ConfigManager {
      * @param path The path that should be validated.
      */
     private static validatePath(path: string) {
+        if (path === '') return;
         if (!/[a-z0-9_\-.]+/gi.test(path)) throw new Error(`The config path '${path}' is invalid. Please use alphanumeric characters, dashes, underscores and dots only.`);
         if (/(^\.)|(\.$)/g.test(path)) throw new Error(`The config path '${path}' can't start or end with a dot.`);
         if (/[.]{2,}/g.test(path)) throw new Error(`The config path '${path}' is invalid. Please only use one dot at once to separate a new config section.`);
