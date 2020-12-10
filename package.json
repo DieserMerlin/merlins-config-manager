@@ -2,24 +2,32 @@
   "name": "merlins-config-manager",
   "version": "1.0.3",
   "description": "A simple configuration manager that uses the advantages of typescript to easily create templated config sections.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/diesermerlin/merlins-config-manager.git"
   },
   "scripts": {
     "prepublish": "npm build",
-    "build": "tsc && typedoc --out docs src"
+    "build": "tsc && typedoc --out docs src",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run check"
   },
   "keywords": [],
   "author": "Merlin Westphal",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^14.6.2",
+    "@types/node": "^13.11.1",
     "typedoc": "^0.19.0",
-    "typescript": "^4.0.2",
-    "ts-node": "^9.0.0"
+    "typescript": "^3.8.3",
+    "ts-node": "^9.0.0",
+    "gts": "^2.0.2"
   },
   "bugs": {
     "url": "https://github.com/diesermerlin/merlins-config-manager/issues"

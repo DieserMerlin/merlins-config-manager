@@ -9,6 +9,9 @@ $ npm i merlins-config-manager
 
 ## Usage
 
+If you want to have all configurations of your application in one file please take a look at the Basics section below.
+Use the "ConfigFactory" otherwise as it's as simple as the ConfigManager and can handle multiple configs at once.
+
 ### Basics
 Usage is as simple as it could be. Just create an instance of the ConfigManager class and start adding sections.
 When a section is defined, the config.json file in the project root is created/updated and the default values provided are added.
